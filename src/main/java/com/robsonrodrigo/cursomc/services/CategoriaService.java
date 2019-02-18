@@ -1,6 +1,8 @@
 package com.robsonrodrigo.cursomc.services;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
@@ -39,4 +41,7 @@ public class CategoriaService {
 			
 		}
 	} 
+	public List<Categoria> findAll(){
+		return repo.findAll();
+	}
 }
