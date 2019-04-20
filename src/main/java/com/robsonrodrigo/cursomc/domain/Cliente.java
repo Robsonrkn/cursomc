@@ -46,8 +46,8 @@ public class Cliente implements Serializable{
 	@CollectionTable(name="telefone")
 	private Set<String> telefones = new HashSet<>();
 	
-	@ElementCollection(fetch = FetchType.EAGER)
-	@CollectionTable(name = "PERFIS")
+	@ElementCollection(fetch=FetchType.EAGER)
+	@CollectionTable(name="PERFIS")
 	private Set<Integer> perfis = new HashSet<>();
 	
 	public Cliente() {
@@ -104,12 +104,14 @@ public class Cliente implements Serializable{
 		this.senha = senha;
 	}
 	
-	public Set<Perfil> getPerfis(){
+	public Set<Perfil> getPerfis() {
 		return perfis.stream().map(x -> Perfil.ToEnum(x)).collect(Collectors.toSet());
 	}
+
 	public void addPerfil(Perfil perfil) {
 		perfis.add(perfil.getCod());
 	}
+	
 	public TipoCliente getTipo() {
 		return TipoCliente.ToEnum(tipo);
 	}
