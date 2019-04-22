@@ -14,10 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import com.robsonrodrigo.cursomc.domain.Cliente;
 import com.robsonrodrigo.cursomc.domain.Pedido;
-import com.robsonrodrigo.cursomc.dto.ClienteDTO;
 import com.robsonrodrigo.cursomc.services.PedidoService;
 
 @RestController
